@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Enhanced logging feature with structured logging support
 - Version endpoint in `VersionController`
 - Basic logging infrastructure
 - Employee management API
