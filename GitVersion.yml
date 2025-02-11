@@ -1,26 +1,14 @@
 mode: ContinuousDelivery
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
 branches:
   main:
     regex: ^master$|^main$
-    mode: ContinuousDelivery
     increment: Patch
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-    source-branches: []
-    is-release-branch: false
   feature:
     regex: ^features?[/-]
-    mode: ContinuousDelivery
     increment: Inherit
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: false
-    source-branches: ['main', 'master']
-    is-release-branch: false
   develop:
     regex: ^dev(elop)?(ment)?$
-    mode: ContinuousDeployment
     increment: Minor
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: true
-    source-branches: ['main', 'master']
-    is-release-branch: false
